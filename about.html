@@ -152,28 +152,27 @@
                         <div class="tp-main-menu">
                            <nav class="tp-mobile-menu-active">
                               <ul>
-                                 <li class="has-dropdown">
-                                    <a href="index.html">Home</a>
-                                    <ul class="tp-submenu submenu">
-                                       <li><a href="index.html">Home One</a></li>
-                                       <li><a href="index-2.html">Home Two</a></li>
-                                       <li><a href="index-3.html">Home Three</a></li>
-                                    </ul>
-                                 </li>
+                                 <li><a href="index.html">Home</a></li>
                                  <li><a href="about.html">About</a></li>
-                                 <li><a href="service.html">Service</a></li>
-                                 <li class="has-dropdown">
-                                    <a href="blog.html">Blog</a>
-                                    <ul class="tp-submenu submenu">
-                                       <li><a href="blog.html">Blog</a></li>
-                                       <li><a href="blog-sidebar.html">Blog sidebar</a></li>
-                                       <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                 </li>
-                                 <li><a href="portfolio-details.html">Portfolio</a></li>
+                                 <li><a href="https://medium.com/@queeninthecloudd" target="_blank">Blog</a></li>
                                  <li><a href="contact.html">Contact</a></li>
                               </ul>
                            </nav>
+                           <style>
+                           .tp-main-menu ul {
+                               display: flex;
+                               gap: 2rem;
+                           }
+                           .tp-main-menu ul li a {
+                               font-size: 15px;
+                               font-weight: 500;
+                               color: var(--tp-common-white);
+                               transition: color 0.2s ease;
+                           }
+                           .tp-main-menu ul li a:hover {
+                               color: var(--tp-theme-secondary);
+                           }
+                           </style>
                         </div>
                      </div>
                      <div class="col-8 col-xl-4">
@@ -202,9 +201,27 @@
          <div class="tp-home-area tp-about-wrap tp-about-spacing">
             <div class="container">
                <div class="row gx-24">
-                  <div class="col-lg-4 mb-25 d-flex flex-column gap-3">
-                     <div class="tp-home-2-author tp-home-author-shadow h-100 p-relative">
-                        <img class="tp-round-10" src="assets/img/author/thumb.jpg" alt="Queen's Avatar" style="width: 100%; height: 340px; object-fit: cover;">
+                  <div class="col-lg-4 mb-25 d-flex flex-column" style="gap: 28px;">
+                     <div class="tp-home-2-author h-100 p-relative tp-home-author-shadow">
+                        <div class="author-glow"></div>
+                        <img class="tp-round-10" src="assets/img/author/thumb.jpg" alt="Queen's Avatar" style="width: 100%; height: 340px; object-fit: cover; position: relative; z-index: 2;">
+                        <style>
+                        .author-glow {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 100%;
+                            height: 100%;
+                            transform: translate(-50%, -50%);
+                            background: var(--tp-theme-secondary);
+                            filter: blur(60px);
+                            opacity: 0.3;
+                            z-index: 1;
+                        }
+                        .tp-home-2-author {
+                            overflow: hidden;
+                        }
+                        </style>
                      </div>
                      <div class="tp-about-tools tp-round-4" style="background: var(--tp-theme-primary); border: 1px solid rgba(255,255,255,0.08); padding: 18px 12px;">
                         <h3 class="tp-home-title fw-500 tp-text-common-white mb-14 text-center">Tools I Work With</h3>
@@ -220,13 +237,24 @@
                      </div>
                      <div class="tp-about-social-wrap tp-round-4" style="background: var(--tp-theme-primary); border: 1px solid rgba(255,255,255,0.08); padding: 18px 12px;">
                         <h3 class="tp-home-title fw-500 tp-text-common-white mb-14 text-center">Find Me Online</h3>
-                        <div class="tp-about-social-grid d-flex flex-column gap-2 align-items-center">
-                           <a href="https://x.com/queeninthecloud?s=21" class="tp-about-social-btn" target="_blank"><i class="fa-brands fa-x-twitter"></i> <span>Twitter/X</span></a>
-                           <a href="https://www.instagram.com/queensworldd4?igsh=cnVpZTI4Y2Y4bXVs" class="tp-about-social-btn" target="_blank"><i class="fa-brands fa-instagram"></i> <span>Instagram</span></a>
-                           <a href="https://www.linkedin.com/in/queenin-thecloud-9a454b36b" class="tp-about-social-btn" target="_blank"><i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span></a>
-                           <a href="http://www.youtube.com/@QueenInTheCloud" class="tp-about-social-btn" target="_blank"><i class="fa-brands fa-youtube"></i> <span>YouTube</span></a>
-                           <a href="https://www.reddit.com/user/Sea_Bonus_1845/" class="tp-about-social-btn" target="_blank"><i class="fa-brands fa-reddit"></i> <span>Reddit</span></a>
+                        <div class="tp-about-social-grid d-grid" style="grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                           <a href="https://x.com/queeninthecloud" class="tp-about-social-btn tp-about-social-btn-icon" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                           <a href="https://www.instagram.com/queensworldd4?igsh=cnVpZTI4Y2Y4bXVs" class="tp-about-social-btn tp-about-social-btn-icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                           <a href="https://www.linkedin.com/in/queenin-thecloud-9a454b36b" class="tp-about-social-btn tp-about-social-btn-icon" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                           <a href="http://www.youtube.com/@QueenInTheCloud" class="tp-about-social-btn tp-about-social-btn-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                           <a href="https://www.reddit.com/user/Sea_Bonus_1845/" class="tp-about-social-btn tp-about-social-btn-icon" target="_blank"><i class="fa-brands fa-reddit"></i></a>
+                           <a href="https://medium.com/@queeninthecloudd" class="tp-about-social-btn tp-about-social-btn-icon" target="_blank"><i class="fa-brands fa-medium"></i></a>
                         </div>
+                        <style>
+                        .tp-about-social-btn-icon {
+                            justify-content: center;
+                            padding: 15px !important;
+                        }
+                        .tp-about-social-btn-icon i {
+                            font-size: 22px;
+                            margin: 0;
+                        }
+                        </style>
                      </div>
                   </div>
                   <div class="col-lg-8 mb-25">
